@@ -38,7 +38,7 @@ extern QString QtKeyModifierToQString(const Qt::Key& modifier_qtkey,
 class HotkeyRecorderWidget : public QLineEdit {
 Q_OBJECT
 public:
-    struct WindowsHotkey {
+    struct Hotkey {
         Qt::KeyboardModifiers QtModifiers;
         QList<Qt::Key> QtModifierKeys;
         Qt::Key QtKey;
@@ -47,8 +47,8 @@ public:
         quint32 ScanCode;
         quint32 Vkid;
 
-        bool operator==(const WindowsHotkey&) const;
-        bool operator!=(const WindowsHotkey&) const;
+        bool operator==(const Hotkey&) const;
+        bool operator!=(const Hotkey&) const;
         operator QString() const;
         operator bool() const;
 
@@ -57,14 +57,14 @@ public:
     };
 
 signals:
-    void HotkeyRecorded(HotkeyRecorderWidget::WindowsHotkey);
+    void HotkeyRecorded(HotkeyRecorderWidget::Hotkey);
 
 protected:
     virtual bool event(QEvent*) override;
 
 private:
-    WindowsHotkey lastWindowsHotkeyEmitted;
-    WindowsHotkey windowsHotkey;
+    Hotkey lastHotkeyEmitted;
+    Hotkey stagedHotkey;
     bool mainKeyEstablished;
     bool isRecording;
 
@@ -73,7 +73,7 @@ public slots:
     void StopRecording();
 
 public:
-    void UpdateWindowsHotkey(const WindowsHotkey& windows_hotkey);
+    void UpdateHotkey(const Hotkey& hotkey);
     bool IsRecording() const;
     void ClearState();
 
