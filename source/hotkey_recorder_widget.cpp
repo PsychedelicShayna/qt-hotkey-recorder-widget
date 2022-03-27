@@ -125,6 +125,10 @@ void HotkeyRecorderWidget::Hotkey::Clear() {
     Vkid         = NULL;
 }
 
+HotkeyRecorderWidget::Hotkey::Hotkey() {
+    Clear();
+}
+
 bool HotkeyRecorderWidget::event(QEvent* event) {
     const auto& event_type { event->type() };
 

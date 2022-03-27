@@ -54,6 +54,8 @@ public:
 
         QString ToString() const;
         void Clear();
+
+        Hotkey();
     };
 
 signals:
