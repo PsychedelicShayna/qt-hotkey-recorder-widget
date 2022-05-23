@@ -5,5 +5,5 @@ The header does include some quality of life code for WinAPI value conversions, 
 
 Currently being used by:
 - [cursor-locker](https://github.com/PsychedelicShayna/cursor-locker)
-- [opacity-chan](https://github.com/PsychedelicShayna/opacity-chan/)
+- [overlayer](https://github.com/PsychedelicShayna/overlayer/)
 - [cursor-rails](https://github.com/PsychedelicShayna/cursor-rails/)
