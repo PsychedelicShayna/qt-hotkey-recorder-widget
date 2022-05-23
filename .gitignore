@@ -1,7 +1,5 @@
 /*
 
-!source/
-
 !.gitignore
-!README.md
-!LICENSE
+!*.hpp
+!*.cpp
