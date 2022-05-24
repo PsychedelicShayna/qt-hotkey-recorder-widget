@@ -3,7 +3,6 @@ CONFIG += c++17
 
 LIBS += -lUser32
 
-
 SOURCES += \
     source-impl/main.cpp \
     source-impl/main_window_dialog.cxx \
